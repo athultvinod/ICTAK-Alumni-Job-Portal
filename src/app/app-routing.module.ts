@@ -6,14 +6,13 @@ import { EmployerComponent } from './employer/employer.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path:'',component:MainComponent},
   
   {path:'login', component:LoginComponent},
-  {path:'alumni', component:AlumniComponent},
-  {path:'employer', component:EmployerComponent},
-  {path:'faculty',component:FacultyComponent},
+  {path:'signup',component:SignupComponent},
   {path:'aboutus',component:AboutusComponent}
 ];
 

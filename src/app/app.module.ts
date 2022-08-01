@@ -11,6 +11,7 @@ import { EmployerComponent } from './employer/employer.component';
 import { AlumniComponent } from './alumni/alumni.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { FooterComponent } from './footer/footer.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     EmployerComponent,
     AlumniComponent,
     AboutusComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
