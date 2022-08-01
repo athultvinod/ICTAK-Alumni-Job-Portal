@@ -17,3 +17,17 @@
     label{
         color: white;
     }
+p{
+    font-size: larger;
+    color: white;
+}
+
+img{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
