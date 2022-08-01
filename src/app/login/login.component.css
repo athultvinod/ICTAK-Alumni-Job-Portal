@@ -6,7 +6,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: gray;
+    background-color: black;
     transform: translate(-50%, -50%);
 }
 .card h1,
