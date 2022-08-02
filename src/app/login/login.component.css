@@ -19,6 +19,7 @@ img{
     left: 50%;
     background-color:grey;
     transform: translate(-50%, -50%);
+    margin-top: 50px;
 }
 .card h1,
     h6{

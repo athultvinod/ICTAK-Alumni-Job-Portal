@@ -90,7 +90,7 @@
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #ffc107;
+  color: blue;
   font-size: 18px;
   line-height: 1;
 }
@@ -114,7 +114,7 @@
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #ffc107;
+  color: blue;
 }
 
 #footer .footer-newsletter {
@@ -154,7 +154,7 @@
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ffc107;
+  background: lightskyblue;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -162,7 +162,7 @@
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #ffce3a;
+  background: blue;
 }
 
 #footer .credits {
