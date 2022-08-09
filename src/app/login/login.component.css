@@ -1,36 +1,19 @@
-img{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    z-index: -1;
-}
-
-
-.card{
-    border-radius: 5%;
-    border: none;
-    width: 500px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color:grey;
-    transform: translate(-50%, -50%);
-    margin-top: 50px;
-}
-.card h1,
-    h6{
-        color: white;
-
-    }
-    label{
-        color: white;
-    }
-
-
-
-
-
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-color:rgba(202, 197, 197, 0.945);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }

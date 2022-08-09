@@ -6,7 +6,7 @@ import { EmployerComponent } from './employer/employer.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
-import { SignupComponent } from './signup/signup.component';
+import {SignupComponent} from'./signup/signup.component';
 import { JobsComponent } from './jobs/jobs.component';
 
 const routes: Routes = [
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'jobs',component:JobsComponent}
+  {path:'jobs',component:JobsComponent},
+  {path:'submit',component:JobsComponent}
 ];
 
 @NgModule({
