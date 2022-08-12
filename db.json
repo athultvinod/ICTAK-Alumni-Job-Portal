@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "postName": "DB Developer",
+      "companyName": "Auberon Technology Pvt Ltd",
+      "location": "Kochi",
+      "skills": "Designing skills in Database",
+      "experience": "1 Year",
+      "lastDate": "25-08-2022"
+    },
+    {
+      "id": 2,
+      "postName": "Website Designer (Bootstrap)",
+      "companyName": "Axnol Digital Solutions",
+      "location": "Trivandrum",
+      "skills": "HTML, CSS, Bootstrap",
+      "experience": "2-5 Years",
+      "lastDate": "10-09-2022"
+    },
+    {
+      "id": 3,
+      "postName": "TEAM LEAD",
+      "companyName": "Cetacean Business Solutions LLP",
+      "location": "Kochi",
+      "skills": "Excellent Mentoring Skills",
+      "experience": "5 Years",
+      "lastDate": "25-10-2022"
+    },
+    {
+      "id": 4,
+      "postName": "Full Stack Developer",
+      "companyName": "Auberon Technology Pvt Ltd",
+      "location": "Kochi",
+      "skills": "Node JS, HTML, CSS ",
+      "experience": "0-1 Years",
+      "lastDate": "15-09-2022"
+    },
+    {
+      "id": 5,
+      "postName": "Senior Programmer",
+      "companyName": "Tata Consultancy Services",
+      "location": "Chennai",
+      "skills": "Database, SQL, IDEs",
+      "experience": "2-3 Years",
+      "lastDate": "30-08-2022"
+    },
+    {
+      "id": 6,
+      "postName": "Software Developer",
+      "companyName": "Tata Elxi",
+      "location": "Trivandrum",
+      "skills": "JAVA, Python, C++",
+      "experience": "1-4 Years",
+      "lastDate": "10-10-2022"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
