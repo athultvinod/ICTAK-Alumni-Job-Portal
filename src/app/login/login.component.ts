@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,FormGroup,Validators,FormBuilder } from '@angular/forms';
+import { FormControl,FormGroup,Validators,FormBuilder, EmailValidator } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,6 +17,7 @@ onSubmit() {
   if (this.registerForm.invalid) {
       return;
   }
+
   //True if all the fields are filled
   else{
     location.replace("http://localhost:4200/jobs")
