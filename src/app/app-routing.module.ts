@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import {SignupComponent} from'./signup/signup.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { JobListComponent } from './job-list/job-list.component';
 
 const routes: Routes = [
   {path:'',component:MainComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'jobs',component:JobsComponent},
-  {path:'submit',component:JobsComponent}
+  {path:'submit',component:JobsComponent},
+  {path: 'joblist', component:JobListComponent}
 ];
 
 @NgModule({
