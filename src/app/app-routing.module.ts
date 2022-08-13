@@ -1,3 +1,8 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AdminDashboardComponent } from './admin/component/admin-dashboard/admin-dashboard.component';
+import { SigninComponent } from './admin/component/signin/signin.component';
+import { AdminComponent } from './admin/admin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -17,11 +22,18 @@ const routes: Routes = [
   {path:'aboutus',component:AboutusComponent},
   {path:'jobs',component:JobsComponent},
   {path:'submit',component:JobsComponent},
-  {path: 'joblist', component:JobListComponent}
+  {path: 'joblist', component:JobListComponent},
+  {path: 'siginin', component:SigninComponent},
+  {path: 'admin', component:AdminComponent, children:[
+    {path: 'siginin', component:SigninComponent}
+  ]},
+  {path: 'admin-dashboard', component: AdminDashboardComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), BrowserModule,FormsModule,ReactiveFormsModule],
+
+  exports: [RouterModule],
+
 })
 export class AppRoutingModule { }

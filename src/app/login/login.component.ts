@@ -1,3 +1,4 @@
+import { AdminAuthService } from './../admin/service/admin-auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup,Validators,FormBuilder, EmailValidator } from '@angular/forms';
 @Component({
@@ -6,9 +7,15 @@ import { FormControl,FormGroup,Validators,FormBuilder, EmailValidator } from '@a
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  adminLoginData = new FormGroup({
+    username : new FormControl,
+    password : new FormControl
+  })
+
   registerForm:any = FormGroup;
   submitted = false;
-  constructor( private formBuilder: FormBuilder) { }
+  constructor( private formBuilder: FormBuilder, private adminAuth : AdminAuthService) { }
   get f() { return this.registerForm.controls; }
 onSubmit() {
   
@@ -20,7 +27,7 @@ onSubmit() {
 
   //True if all the fields are filled
   else{
-    location.replace("http://localhost:4200/jobs")
+    location.replace("/jobs")
   }
 }
 
@@ -30,6 +37,9 @@ onSubmit() {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
       });
+    }
+    adminLogin(){
+      this.adminAuth.adminLogin(this.adminLoginData.value.username, this.adminLoginData.value.password);
     }
   }
 

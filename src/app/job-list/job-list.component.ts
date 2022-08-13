@@ -35,6 +35,10 @@ export class JobListComponent implements OnInit {
     this.showAdd = true;
     this.showUpdate = false;
   }
+  backToAdmin(){
+    this.formValue.reset();
+    this['router'].navigate(['/admin-dashboard']);
+  }
   postJobDetails(){
     this.jobModelObj.postName = this.formValue.value.postName;
     this.jobModelObj.companyName = this.formValue.value.companyName;
