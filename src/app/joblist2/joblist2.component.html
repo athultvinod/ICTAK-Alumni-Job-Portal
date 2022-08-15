@@ -1,0 +1,48 @@
+
+<div class="card">
+    <form (ngSubmit)="NewJob()">
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Si No</td>
+                            <td><input type="text" name="p_id" [(ngModel)]="jobItem.id"></td>
+                        </tr>
+                        <tr>
+                            <td>Post Name</td>
+                            <td><input type="text" name="p_job" [(ngModel)]="jobItem.postName"></td>
+                        </tr>
+                        <tr>
+                            <td>Company Name</td>
+                            <td><input type="text" name="p_company" [(ngModel)]="jobItem.companyName"></td>
+                        </tr>
+                        <tr>
+                            <td>Skills</td>
+                            <td><input type="text" name="p_skills" [(ngModel)]="jobItem.skills"></td>
+                        </tr>
+                        <tr>
+                            <td>Experience</td>
+                            <td><input type="text" name="p_experience" [(ngModel)]="jobItem.experience"></td>
+                        </tr>
+                        <tr>
+                            <td>Last Date</td>
+                            <td><input type="text" name="p_lastdate" [(ngModel)]="jobItem.lastDate"></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td><input type="text" name="p_location" [(ngModel)]="jobItem.location"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="submit" value="Submit"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

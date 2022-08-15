@@ -16,6 +16,9 @@ import { JobsComponent } from './jobs/jobs.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
+import { Jobs2Component } from './jobs2/jobs2.component';
+import { Joblist2Component } from './joblist2/joblist2.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,14 +33,17 @@ import { AdminModule } from './admin/admin.module';
     FooterComponent,
     SignupComponent,
     JobsComponent,
-    JobListComponent
+    JobListComponent,
+    Jobs2Component,
+    Joblist2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    AdminModule
+    AdminModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

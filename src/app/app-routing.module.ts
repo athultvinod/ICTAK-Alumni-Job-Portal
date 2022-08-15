@@ -14,6 +14,8 @@ import { MainComponent } from './main/main.component';
 import {SignupComponent} from'./signup/signup.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { JobListComponent } from './job-list/job-list.component';
+import { Jobs2Component } from './jobs2/jobs2.component';
+import { Joblist2Component } from './joblist2/joblist2.component';
 
 const routes: Routes = [
   {path:'',component:MainComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path:'jobs',component:JobsComponent},
   {path:'submit',component:JobsComponent},
   {path: 'joblist', component:JobListComponent},
+  {path: 'jobs2', component:Jobs2Component},
+  {path:'joblist2',component:Joblist2Component},
   {path: 'siginin', component:SigninComponent},
   {path: 'admin', component:AdminComponent, children:[
     {path: 'siginin', component:SigninComponent}
@@ -33,7 +37,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes), BrowserModule,FormsModule,ReactiveFormsModule],
 
-  exports: [RouterModule],
+  exports: [RouterModule]
 
 })
 export class AppRoutingModule { }
