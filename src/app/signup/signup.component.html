@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-6">
             <img src="assets/loginbg.png" alt="">
-            <div class="card">
+            <!--div class="card">
                 <div class="text-center">
                     
                     <h1>Sign Up</h1>
@@ -13,9 +13,9 @@
                     <div class="mb-3">
                         <label for="exampleInputName1" class="form-label">First Name</label>
                         <input type="text" class="form-control" id="exampleInputName1">
-                        
-                      </div>
-                      <div class="mb-3">
+                     </div>
+
+                     <div class="mb-3">
                         <label for="exampleInputName2" class="form-label">Last Name</label>
                         <input type="text" class="form-control" id="exampleInputName2">
                         
@@ -54,4 +54,67 @@
             </div>
         </div>
     </div>
-</div>
+</div-->
+<div class="container">
+  <div class="row">
+  <div class="col-md-6 offset-md-3">
+  <h3>Register here</h3>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+  <label>First Name</label>
+  <input type="text" formControlName='firstName'class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['firstName'].errors }" />
+  <div *ngIf="submitted && registerForm.controls['firstName'].errors" class="text-danger">
+  <div *ngIf="registerForm.controls['firstName'].errors['required']">First Name is required</div>
+  </div>
+  </div>
+  <div class="form-group">
+  <label>Last Name</label>
+  <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['lastName'].errors }" />
+  <div *ngIf="submitted && registerForm.controls['lastName'].errors" class="text-danger">
+  <div *ngIf="registerForm.controls['lastName'].errors['required']">Last Name is required</div>
+  </div>
+  </div>
+ 
+  <div class="form-group">
+  <label>Email</label>
+  <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['email'].errors }" />
+  <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
+  <div *ngIf="registerForm.controls['email'].errors['required']">Email is required</div>
+  <div *ngIf="registerForm.controls['email'].errors['email']">Email must be a valid email address</div>
+  </div>
+  </div>
+  <div class="form-group">
+  <label>Password</label>
+  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['password'].errors }"  />
+  <div *ngIf="submitted && registerForm.controls['password'].errors" class="text-danger">
+  <div *ngIf="registerForm.controls['password'].errors['required']">Password is required</div>
+  <div *ngIf="registerForm.controls['password'].errors['minlength']">Password must be at least 6 characters</div>
+  </div>
+  </div>
+  <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['confirmPassword'].errors }" />
+    <div *ngIf="submitted && registerForm.controls['confirmPassword'].errors" class="invalid-feedback">
+    <div *ngIf="registerForm.controls['confirmPassword'].errors['required']">Confirm Password is required</div>
+    <div *ngIf="registerForm.controls['confirmPassword'].errors['mustMatch']">Password and confirm not match</div>
+    </div>
+  </div>
+
+  <br>
+  <div class="form-group">
+  <label><strong>Sign up as :</strong></label><br>
+  <input type="radio" formControlName="userCategory" id="userCategory3" value="alumni" /> Alumni<br>
+  <input type="radio" formControlName="userCategory" id="userCategory2" value="Employer" /> Employer<br>
+  <input type="radio" formControlName="userCategory" id="userCategory1" value="faculty"/> Faculty<br>
+  <div *ngIf="submitted && registerForm.controls['userCategory'].errors" class="text-danger"></div>
+
+  </div>
+
+  <div class="form-group"><br>
+  <button class="btn btn-primary">Register</button>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>

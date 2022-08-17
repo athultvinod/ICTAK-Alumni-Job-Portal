@@ -1,3 +1,10 @@
+.container{
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 1cm;
+    
+
+}
 img{
     position: fixed;
     right: 0;
@@ -24,14 +31,15 @@ img{
 }
 .card h1,
     h6{
-        color: white;
+        color:black;
 
     }
     label{
-        color: white;
+        color: black;
     }
 
 .input-group-text{
     color: black;
     
 }
+
