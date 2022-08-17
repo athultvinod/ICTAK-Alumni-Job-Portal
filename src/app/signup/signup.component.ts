@@ -17,7 +17,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { CustomValidators } from '../_helpers/customValidator';
-import { MustMatch } from '../_helpers/mustmatch.validator';
 
 @Component({
   selector: 'app-signup',
