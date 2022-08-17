@@ -28,7 +28,7 @@
       text-align: center;
   }
 #main {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

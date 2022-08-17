@@ -4,6 +4,7 @@ import { Faculty } from 'src/app/admin/model/faculty';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-faculty-data',
@@ -12,52 +13,52 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class FacultyDataComponent implements OnInit {
 
-  facultyDetailsForm = new FormGroup({
-    _id : new FormControl(),
-    faculty_number : new FormControl(),
-    faculty_name : new FormControl(),
-    department : new FormControl(),
-    email : new FormControl(),
-    mobile : new FormControl(),
-    birth_date : new FormControl(),
-    joining_year: new FormControl(),
-    password: new FormControl()
-  })
+  faculty : boolean = false;
+  employer : boolean = false;
+  alumni : boolean = false;
+  postjob : boolean = false;
 
-  facultyObj : Faculty = {
-    _id : '',
-    faculty_number : 0,
-    faculty_name : '',
-    department : '',
-    email : '',
-    password:'',
-    joining_year: 0,
-    birth_date: '' ,
-    mobile: 0
-
-
-
-  }
-
-  constructor(private fb : FormBuilder) { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
-    this.facultyDetailsForm = this.fb.group({
-      _id : ['',[Validators.required]],
-      faculty_number : ['',[Validators.required]],
-      faculty_name : ['',[Validators.required]],
-      department : ['',[Validators.required]],
-      email : ['',[Validators.required]],
-      mobile : ['',[Validators.required]],
-      birth_date : ['',[Validators.required]],
-      joining_year: ['',[Validators.required]],
-      password: ['',[Validators.required]]
-
-    })
+    
   }
 
-  addNewFaculty(){
-      console.log(this.facultyDetailsForm.value);
+  setoff(){
+    this.postjob = false;
+    this.faculty = false;
+    this.employer = false;
+    this.alumni = false;
+    
+  }
+  showPostJob(){
+    this.setoff();
+    this.postjob = true;
+    this.router.navigate(['/joblist2']);
+
+  }
+  showViewJobs(){
+    this.setoff();
+    this.postjob = true;
+    this.router.navigate(['/jobs2']);
+  }
+  showFacultyData(){
+    this.setoff();
+    this.faculty = true;
+  }
+
+  showEmployerData(){
+    this.setoff();
+    this.employer = true;
+  }
+
+  showAlumniData(){
+    this.setoff();
+    this.alumni = true;
+  }
+  signout(){
+   localStorage.removeItem("token"); 
+    this.router.navigate(['/login']);
   }
 
 }

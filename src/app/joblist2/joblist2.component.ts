@@ -21,7 +21,7 @@ export class Joblist2Component implements OnInit {
   NewJob(){
     this.jobService.addJobs(this.jobItem);
     alert('New Job Added');
-    this.router.navigate(['/']);
+    this.router.navigate(['jobs2']);
   }
 
 }

@@ -27,10 +27,16 @@ export class AdminDashboardComponent implements OnInit {
     this.alumni = false;
     
   }
-  showPostJobt(){
+  showPostJob(){
     this.setoff();
     this.postjob = true;
-    this.router.navigate(['/joblist']);
+    this.router.navigate(['/joblist2']);
+
+  }
+  showViewJobs(){
+    this.setoff();
+    this.postjob = true;
+    this.router.navigate(['/jobs2']);
   }
   showFacultyData(){
     this.setoff();
