@@ -1,7 +1,8 @@
 <div class="container-fluid text-center">
     <h1>Job List</h1>
        <button (click)="clickAddJob()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Job</button> 
-</div>
+        <button (click)="backToAdmin()" type="button" routerLink="/admin-dashboard" class="btn btn-secondary mx-3">Back to Admin Profile</button>
+      </div>
 <table class="table  mt-3">
     <thead>
         <tr>

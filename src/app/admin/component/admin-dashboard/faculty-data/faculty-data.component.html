@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <!-- first row -->
+    <div class="row text-center text-success mt-3">
+        <div class="col-md-4">
+
+            <a href="" style="text-decoration:none;" class="text-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Add Faculty</h6>
+                        <p>+</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+            <a href="" style="text-decoration:none;" class="text-success">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Total Faculties</h6>
+                        <p>10</p>
+                    </div>
+    
+                </div>
+            </a>
+            
+
+        </div>
+    </div>
+
+
+    <!-- add faculty -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success"  id="exampleModalLabel">Add Faculty</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        <form>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="faculty_name">
+                <label for="floatingInput">Full Name</label>
+                <div *ngIf="facultyDetailsForm.get('faculty_name')?.invalid && (facultyDetailsForm.get('faculty_name')?.dirty|| facultyDetailsForm.get('faculty_name')?.touched)">
+                    This Field Is Required
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+                <label for="floatingInput">Email</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="mobile">
+                <label for="floatingInput">Mobile</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="joining_year" >
+                <label for="floatingInput">Joining Year</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="birth_date">
+                <label for="floatingInput">Birth Date</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+                <label for="floatingPassword">Password</label>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Add Faculty</button>
+              </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
