@@ -16,7 +16,7 @@ export class AdminDashboardComponent implements OnInit {
   constructor(private router : Router) { }
 
   ngOnInit(): void {
-    this.showFacultyData();
+    // this.showFacultyData();
     // this.showEmployerData();
     // this.showAlumniData();
   }
