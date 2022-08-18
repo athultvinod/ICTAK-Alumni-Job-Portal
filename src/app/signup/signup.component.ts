@@ -51,7 +51,10 @@ export class SignupComponent {
     if (this.registerForm.invalid) {
       return;
     }
+    else{
+      location.replace("/login")
+    }
 
-    alert('registration succesfull');
+    alert('registration succesfull. You can login only after admin approval');
   }
 }
