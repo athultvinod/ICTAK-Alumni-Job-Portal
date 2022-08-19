@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   adminUsername : 'admin@gmail.com',
-  adminPassword : 'Ictakadmin@1'
+  adminPassword : 'Ictakadmin1'
 };
 
 /*

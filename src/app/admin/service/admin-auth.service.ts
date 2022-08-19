@@ -19,12 +19,13 @@ export class AdminAuthService {
   // adminlogin
   adminLogin(username : string, password : string){
 
-    if(username===this.adminUsername && password===this.adminPassword){
+    if(username === this.adminUsername && password === this.adminPassword){
       console.log('Login is successful');
-      localStorage.setItem("token", (Math.random()+1).toString(36).substring(7));
+      location.replace("/admin-dashboard")
+      // localStorage.setItem("token", (Math.random()+1).toString(36).substring(7));
     } else{
       alert('Login is failed. Wrong credentials')
-      console.log('Login is failed.');
+      console.log('Login is failed.');  
     
     }
 
