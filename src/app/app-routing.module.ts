@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'jobs2', component:Jobs2Component},
   {path:'joblist2',component:Joblist2Component},
   {path: 'siginin', component:SigninComponent},
-  {path: 'admin', component:AdminComponent},
+  {path: 'adminlogin', component:AdminComponent},
   {path: 'admin-dashboard', component: AdminDashboardComponent},
   {path: 'employer-data', component: EmployerDataComponent},
   {path: 'faculty-data', component: FacultyDataComponent},
