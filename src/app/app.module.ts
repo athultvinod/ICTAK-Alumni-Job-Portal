@@ -19,6 +19,8 @@ import { AdminModule } from './admin/admin.module';
 import { Jobs2Component } from './jobs2/jobs2.component';
 import { Joblist2Component } from './joblist2/joblist2.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterAlumniComponent } from './register-alumni/register-alumni.component';
+import { RegisterEmployerComponent } from './register-employer/register-employer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     JobsComponent,
     JobListComponent,
     Jobs2Component,
-    Joblist2Component
+    Joblist2Component,
+    RegisterAlumniComponent,
+    RegisterEmployerComponent
   ],
   imports: [
     BrowserModule,
